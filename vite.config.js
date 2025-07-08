@@ -2,16 +2,23 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig({
+// Replace this with your actual GitHub Pages repo name
+const repoName = 'bhabada'
+
+export default defineConfig(({ mode }) => ({
+  // In dev, serve at '/', in prod serve under '/bhabada/'
+  base: mode === 'production' ? `/${repoName}/` : '/',
+
   plugins: [react()],
+
   esbuild: {
     loader: "jsx",
     include: [
-      // Include ALL .js files in src folder for JSX processing
       /src\/.*\.js$/,
-      /src\/.*\.jsx$/,
+      /src\/.*\.jsx$/
     ],
   },
+
   optimizeDeps: {
     esbuildOptions: {
       loader: {
@@ -19,4 +26,4 @@ export default defineConfig({
       },
     },
   },
-})
+}))
