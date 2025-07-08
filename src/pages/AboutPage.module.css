@@ -1,0 +1,511 @@
+/* AboutPage.module.css - Minimal & Responsive */
+
+.about-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 60vh;
+  min-height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(26, 54, 93, 0.8) 0%, rgba(45, 90, 135, 0.8) 100%);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 80rem;
+  padding: 0 2rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #ffffff, #ffd91a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-content p {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Biography Section */
+.biography {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.bio-layout {
+  display: grid;
+  grid-template-columns: 35rem 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.doctor-photo {
+  position: sticky;
+  top: 2rem;
+}
+
+.doctor-image {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border: 3px solid #ffd91a;
+  margin-bottom: 2rem;
+}
+
+.credentials {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.credentials h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a365d;
+  margin-bottom: 0.5rem;
+}
+
+.credentials p {
+  font-size: 1.4rem;
+  color: #ffd91a;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.experience {
+  background: linear-gradient(135deg, #ffd91a, #ffed4a);
+  color: #1a365d;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+.bio-content h2 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1a365d;
+  position: relative;
+}
+
+.bio-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 6rem;
+  height: 0.3rem;
+  background: linear-gradient(90deg, #ffd91a, #ffed4a);
+  border-radius: 0.2rem;
+}
+
+.bio-text {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.bio-text p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #4a5568;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #ffd91a;
+  transition: transform 0.3s ease;
+}
+
+.bio-text p:hover {
+  transform: translateX(5px);
+}
+
+/* Hospitals Section */
+.hospitals {
+  padding: 5rem 0;
+  background: #f8fafc;
+}
+
+.hospitals-container h2 {
+  font-size: clamp(2.5rem, 4vw, 3.2rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1a365d;
+}
+
+.hospitals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2.5rem;
+}
+
+.hospital-card {
+  background: white;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.hospital-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.hospital-image {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.hospital-info {
+  padding: 2rem;
+  text-align: center;
+}
+
+.hospital-info h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1a365d;
+  margin-bottom: 0.5rem;
+}
+
+.hospital-info p {
+  font-size: 1.4rem;
+  color: #ffd91a;
+  font-weight: 500;
+}
+
+/* Expertise Section */
+.expertise {
+  padding: 6rem 0;
+  background: white;
+}
+
+.expertise-container h2 {
+  font-size: clamp(2.5rem, 4vw, 3.2rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1a365d;
+}
+
+.surgery-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, #1a365d, #2d5a87);
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 35px rgba(26, 54, 93, 0.2);
+}
+
+.stat {
+  text-align: center;
+  color: white;
+}
+
+.stat-number {
+  display: block;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: #ffd91a;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 2.5rem;
+}
+
+.expertise-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.expertise-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.3rem;
+  background: linear-gradient(90deg, #ffd91a, #ffed4a);
+  border-radius: 1.2rem 1.2rem 0 0;
+}
+
+.expertise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd91a, #ffed4a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 20px rgba(255, 217, 26, 0.3);
+}
+
+.expertise-card h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1a365d;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.expertise-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.expertise-card li {
+  font-size: 1.4rem;
+  color: #4a5568;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.expertise-card li:last-child {
+  border-bottom: none;
+}
+
+.expertise-card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #ffd91a;
+  font-weight: bold;
+}
+
+.expertise-card li:hover {
+  color: #1a365d;
+  transform: translateX(3px);
+}
+
+/* Awards Section */
+.awards {
+  padding: 5rem 0;
+  background: #f8fafc;
+}
+
+.awards-container h2 {
+  font-size: clamp(2.5rem, 4vw, 3.2rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1a365d;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2.5rem;
+}
+
+.award-item {
+  background: white;
+  border-radius: 1.2rem;
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.award-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.award-icon {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd91a, #ffed4a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 20px rgba(255, 217, 26, 0.3);
+}
+
+.award-info h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1a365d;
+  margin-bottom: 0.8rem;
+}
+
+.award-info p {
+  font-size: 1.4rem;
+  color: #ffd91a;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.award-info span {
+  font-size: 1.3rem;
+  color: #4a5568;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .bio-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .doctor-photo {
+    position: static;
+    order: -1;
+  }
+  
+  .bio-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .surgery-stats {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+    min-height: 40rem;
+  }
+  
+  .biography,
+  .expertise {
+    padding: 4rem 0;
+  }
+  
+  .hospitals,
+  .awards {
+    padding: 3rem 0;
+  }
+  
+  .doctor-image {
+    height: 35rem;
+  }
+  
+  .surgery-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  .expertise-grid,
+  .hospitals-grid,
+  .awards-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 40vh;
+    min-height: 35rem;
+  }
+  
+  .biography,
+  .expertise,
+  .hospitals,
+  .awards {
+    padding: 2.5rem 0;
+  }
+  
+  .doctor-image {
+    height: 30rem;
+  }
+  
+  .expertise-card,
+  .hospital-card,
+  .award-item {
+    padding: 2rem;
+  }
+  
+  .bio-text p {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .surgery-stats {
+    padding: 1.5rem;
+  }
+}

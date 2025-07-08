@@ -1,0 +1,41 @@
+.logo {
+  padding: 1.6rem 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  width: fit-content;
+  max-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+  display: block;
+  line-height: 1.1;
+}
+
+.dark {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.light {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.dark:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.light:hover {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,25 @@
+.navigation-container {
+  background-color: var(--white-color);
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  min-height: 8rem;
+}
+
+/* Responsive Navigation */
+@media (max-width: 968px) {
+  .navigation-bar {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+}
