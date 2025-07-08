@@ -2,15 +2,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// 👉 use your repo name here
+const repoName = 'bhabada';
+
 export default defineConfig({
+  base: `/${repoName}/`,
   plugins: [react()],
   esbuild: {
     loader: "jsx",
-    include: [
-      // Include ALL .js files in src folder for JSX processing
-      /src\/.*\.js$/,
-      /src\/.*\.jsx$/,
-    ],
+    include: [/src\/.*\.js$/, /src\/.*\.jsx$/],
   },
   optimizeDeps: {
     esbuildOptions: {
