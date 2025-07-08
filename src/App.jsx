@@ -1,3 +1,4 @@
+// src/App.jsx
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import './App.css'
@@ -19,7 +20,7 @@ import AboutPage from './pages/AboutPage.jsx'
 import AchievementsPage from './pages/AchievementsPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 
-// Home page that stitches together all the sections
+// Home page sections
 const HomePage = () => (
   <div className="homepage">
     <NavigationBar />
@@ -42,8 +43,7 @@ export default function App() {
       <Route path="about" element={<AboutPage />} />
       <Route path="achievements" element={<AchievementsPage />} />
       <Route path="contact" element={<ContactPage />} />
-
-      {/* Fallback for any unknown route */}
+      {/* Redirect anything else back to home */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )
